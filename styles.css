@@ -69,11 +69,10 @@ main {
   display: grid;
   gap: 2em;
   margin-top: 10vh;
-  min-height: 62dvh;
+  min-height: 83dvh;
   min-width: fit-content;
   grid-template-columns: repeat(auto-fit, minmax(1fr, 100%));
   grid-template-rows: min(1fr, 20vh) max-content;
-  margin-bottom: 17vh;
 }
 
 @media screen and (min-width: 1024px) {
