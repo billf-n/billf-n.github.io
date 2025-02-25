@@ -8,9 +8,25 @@
   navigation: auto;
 }
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
 }
+
+.no-margin {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+
+/* html {
+  scroll-behavior: smooth;
+} */
 
 body { 
   background-color: #FEF9ED;
@@ -56,12 +72,35 @@ main {
   grid-column: content;
 }
 
-
-.spacing {
-  margin-bottom: 1em;
+.bi {
+  transition-duration: 200ms;
+  color: black;
+  font-size: 24px;
 }
 
-.space-after {
+.bi-github:hover {
+  color: #9198a1;
+}
+
+.bi-linkedin:hover{
+  color: #0a66c2;
+}
+
+.bi-file-earmark-person-fill:hover {
+  color:hsl(170, 100%, 25%);
+}
+
+.same-line {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.after-8px {
+  margin-bottom: 8px;
+}
+
+.after-1em {
   margin-bottom: 1em;
 }
 
@@ -71,17 +110,11 @@ main {
   margin-top: 10vh;
   min-height: 83dvh;
   min-width: fit-content;
-  grid-template-columns: repeat(auto-fit, minmax(1fr, 100%));
-  grid-template-rows: min(1fr, 20vh) max-content;
 }
 
 @media screen and (min-width: 1024px) {
   .landing-half {
     grid-row-start: 2;
-  }
-
-  .landing {
-    grid-template-rows: 20vh max-content;
   }
 
 }
@@ -111,22 +144,51 @@ main {
   min-width: max-content;
 } */
 
-.no-margin-block {
-  margin-block-start: 0px;
-  margin-block-end: 0px;
-}
-
 .main-heading {
   font-size: 90px;
   line-height: 90px;
+  height: min-content;
 }
 
 .subheading {
   font-size: 40px;
 }
 
+@keyframes heading-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes heading-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.view-transition-title-1 {
+  view-transition-name: title-1;
+}
+
+::view-transition-new(title-1) {
+  animation: 0.25s cubic-bezier(0,1,1,1.25) heading-in;
+}
+
 .subheading3 {
   font-size: 32px;
+}
+
+.inline {
+  display: inline;
+}
+
+.article {
+  margin-block-end: 1em;
+  margin-inline-end: 1em;
+}
+
+.article > p {
+  margin-bottom: 8px;
 }
 
 .bio {
