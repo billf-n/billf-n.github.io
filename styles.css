@@ -86,6 +86,10 @@ main {
   color: #0a66c2;
 }
 
+.bi-envelope-at-fill:hover{
+  color: rgb(71, 158, 245);
+}
+
 .bi-file-earmark-person-fill:hover {
   color:hsl(170, 100%, 25%);
 }
@@ -189,6 +193,11 @@ main {
 
 .article > p {
   margin-bottom: 8px;
+}
+
+.preview-img {
+  max-width: 100%;
+  box-shadow: 0px 0px 10px 0px grey;
 }
 
 .bio {
