@@ -187,8 +187,8 @@ main {
 }
 
 .article {
-  margin-block-end: 1em;
-  margin-inline-end: 1em;
+  margin-block-end: 2em;
+  margin-inline-end: 2em;
 }
 
 .article > p {
