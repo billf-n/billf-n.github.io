@@ -94,6 +94,10 @@ main {
   color:hsl(170, 100%, 25%);
 }
 
+.link-blue-hover:hover {
+  color: rgb(71, 158, 245);
+}
+
 .same-line {
   display: inline-flex;
   align-items: baseline;
