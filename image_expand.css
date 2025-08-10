@@ -1,0 +1,33 @@
+.preview-img:hover {
+    transform: scale(1.02) translate(-1%, -1%);
+    transform-origin: left top;
+}
+
+.expanded-img:hover {
+    transform: none;
+}
+
+.expanded-img {
+    grid-column-start: page;
+    position: sticky;
+    transition-duration: 200ms;
+    width: 60vw;
+    z-index: 2;
+    /* position: fixed;
+    align-self: center; */
+}
+
+.background-shade {
+    display: none;
+    background-color: rgba(31, 31, 31, 0.247);
+    height: 100dvh;
+    width: 100dvw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+
+.shade-visible {
+    display: initial;
+}
